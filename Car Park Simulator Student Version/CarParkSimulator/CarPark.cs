@@ -7,71 +7,90 @@ namespace CarParkSimulator
 {
     class CarPark
     {
-        //attributes
-        int currentSpcaces;
-        int maxSpace;
-        EntrySensor entrySensor;
-        ExitSensor exitSensor;
-        TicketMachine ticketMachine;
-        TicketValidator ticketValidator;
-        FullSign fullsign;
-        Barrier entryBarrier;
-        Barrier exitBarrier;
-        //constructor
-        public CarPark(TicketMachine ticketMachine, TicketValidator ticketValidator, FullSign fullsign, Barrier entryBarrier, Barrier exitBarrier)
+        private int currentSpaces;
+        private int maxSpaces = 5;
+
+        private TicketMachine ticketmachine;
+        private TicketValidator ticketvalidator;
+
+
+        public CarPark(TicketMachine ticketmachine, TicketValidator ticketvalidator)
         {
-            maxSpace = 10;
-            this.ticketMachine = ticketMachine;
-            this.ticketValidator = ticketValidator;
-            this.fullsign = fullsign;
-            this.entryBarrier = entryBarrier;
-            this.exitBarrier = exitBarrier;
+            this.ticketmachine = ticketmachine;
+            this.ticketvalidator = ticketvalidator;
+
         }
 
-        //functions
         public void CarArrivedAtEntrance()
         {
-            entrySensor.CarDetected();
-            ticketMachine.GetMessage();
-        }
-        public void CarArrivedAtExit()
-        {
 
         }
-        public void CarEnteredCarPark()
-        {
 
-        }
-        public void CarExitedCarPark()
-        {
-
-        }
-        public int GetCurrentSpaces()
-        {
-            return currentSpcaces;
-        }
-        public bool HasSpace()
-        {
-            if (currentSpcaces < maxSpace)
-            return true;
-            else 
-            return false;
-        }
-        public bool IsFull()
-        {
-            if (HasSpace() == false)
-                return true;
-            else
-                return false;
-
-        }
         public void TicketDispensed()
         {
 
         }
+
+        public void CarEnteredCarPark(){
+
+        }
+
+        public void CarArrivedAtExit()
+        {
+
+        }
+
         public void TicketValidated()
         {
 
         }
+
+        public void CarEnteredCarPark()
+        {
+
+        }
+
+        public bool IsFull()
+        {
+            if (currentSpaces == maxSpaces)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool IsEmpty()
+        {
+            if (currentSpaces == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+        public bool HasSpace()
+        {
+            if (currentSpaces < 5)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public void GetCurrentSpaces()
+        {
+
+        }
+
     }
 }

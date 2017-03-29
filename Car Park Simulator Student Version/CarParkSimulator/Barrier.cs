@@ -7,24 +7,24 @@ namespace CarParkSimulator
 {
     class Barrier
     {
-        private bool lifted = false;
-        //constructor 
-        public Barrier(CarPark carPark)
-        {
+        private bool lifted;
 
-        }
-        //functions
-        public void Lower()
+        public Barrier()
         {
             lifted = false;
         }
 
-        public void Raise()
+        void Lower()
+        {
+            lifted = false;
+        }
+
+        void Raise()
         {
             lifted = true;
         }
 
-        public bool isLifted()
+        bool isLifted()
         {
             return lifted;
         }

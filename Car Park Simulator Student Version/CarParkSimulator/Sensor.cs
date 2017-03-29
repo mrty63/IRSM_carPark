@@ -9,7 +9,7 @@ namespace CarParkSimulator
     {
         protected bool carOnSensor;
 
-        public Sensor(CarPark carPark)
+        public Sensor()
         {
 
         }
