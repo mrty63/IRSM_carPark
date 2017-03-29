@@ -38,7 +38,7 @@ namespace CarParkSimulator
             activeTickets = new ActiveTickets();
             ticketMachine = new TicketMachine(activeTickets);
             ticketValidator = new TicketValidator(activeTickets);
-            entryBarrier = new Barrier();
+            entryBarrier = new Barrier(carPark);
             exitBarrier = new Barrier();
             fullSign = new FullSign();
             carPark = new CarPark(ticketMachine, ticketValidator, fullSign, entryBarrier, exitBarrier);

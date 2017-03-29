@@ -7,7 +7,7 @@ namespace CarParkSimulator
 {
     class EntrySensor : Sensor          // inherits from Sensor
     {
-        public EntrySensor() : base()   // constructor also calls parent (base) constructor
+        public EntrySensor(CarPark carPark) : base(CarPark carPark)   // constructor also calls parent (base) constructor
         {// this function instantiates the EntrySensor:Sensor class
             carOnSensor = false;
         }

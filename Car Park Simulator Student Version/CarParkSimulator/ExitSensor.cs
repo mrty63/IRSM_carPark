@@ -7,7 +7,7 @@ namespace CarParkSimulator
 {
     class ExitSensor : Sensor
     {
-        public ExitSensor() : base()   // constructor also calls parent (base) constructor
+        public ExitSensor(CarPark carPark) : base(CarPark carPark)   // constructor also calls parent (base) constructor
         {// this function instantiates the ExitSensor:Sensor class
             carOnSensor = false;
         }
