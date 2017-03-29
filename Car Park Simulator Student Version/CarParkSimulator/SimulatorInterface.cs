@@ -103,6 +103,51 @@ namespace CarParkSimulator
 
         private void UpdateDisplay()
         {
+            if (entryBarrier.isLifted() == true)
+            {
+                lblEntryBarrier.Text = "True";
+            }
+            else
+            {
+                lblEntryBarrier.Text = "False";
+
+            }
+            if (entrySensor.IsCarOnSensor() == true)
+            {
+                lblEntrySensor.Text = "True";
+            }
+            else
+            {
+                lblEntrySensor.Text = "False";
+            }
+
+            if (exitBarrier.isLifted() == true)
+            {
+                lblExitBarrier.Text = "True";
+            }
+            else 
+            {
+                lblExitBarrier.Text = "False";
+            }
+
+            if (exitSensor.IsCarOnSensor() == true)
+            {
+                lblExitSensor.Text = "True";
+            }
+            else
+            {
+                lblExitSensor.Text = "False";
+            }
+
+            if (fullSign.isLit() == true)
+            {
+                lblFullSign.Text = "True";
+            }
+            else
+            {
+                lblFullSign.Text = "False";
+            }
+            lblSpaces.Text = Convert.ToString(carPark.GetCurrentSpaces());
         }
     }
 }

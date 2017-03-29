@@ -8,8 +8,8 @@ namespace CarParkSimulator
     class CarPark
     {       
         //attributes
-        int currentSpaces;
-        int maxSpaces = 5;
+        private int maxSpaces = 5;
+        private int currentSpaces ;
         EntrySensor entrySensor;
         ExitSensor exitSensor;
         TicketMachine ticketMachine;
@@ -21,11 +21,13 @@ namespace CarParkSimulator
         //constructor
         public CarPark(TicketMachine ticketMachine, TicketValidator ticketValidator, FullSign fullsign, Barrier entryBarrier, Barrier exitBarrier)
         {
+            currentSpaces = maxSpaces;
             this.ticketMachine = ticketMachine;
             this.ticketValidator = ticketValidator;
             this.fullsign = fullsign;
             this.entryBarrier = entryBarrier;
             this.exitBarrier = exitBarrier;
+            
         }
 
         public void CarArrivedAtEntrance()
