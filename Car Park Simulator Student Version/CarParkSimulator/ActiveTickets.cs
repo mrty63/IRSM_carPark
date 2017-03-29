@@ -7,7 +7,6 @@ namespace CarParkSimulator
 {
     class ActiveTickets
     {
-        //private Ticket ticket;
         private List<Ticket> tickets;
 
         public ActiveTickets(List<Ticket> tickets)
