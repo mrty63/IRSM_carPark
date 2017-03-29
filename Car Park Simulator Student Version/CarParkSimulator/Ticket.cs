@@ -18,6 +18,7 @@ namespace CarParkSimulator
 
         public bool IsPaid()
         {
+            bool paid = true;//dont need to check 
             return paid;
         }
 

@@ -9,6 +9,7 @@ namespace CarParkSimulator
     {
         private string message;
         private CarPark carpark;
+        private Ticket ticket;
 
         private ActiveTickets tickets;
 
@@ -30,8 +31,12 @@ namespace CarParkSimulator
         public void TicketEntered()
         {
             message = "Thank you, drive safely.";
-            carpark.TicketValidated();
+            //carpark.TicketValidated();
             tickets.RemoveTicket();
+            ticket.IsPaid();
+            ClearMessage();
+            
+           
         }
 
         public string GetMessage()

@@ -14,12 +14,12 @@ namespace CarParkSimulator
             lit = false;
         }
 
-        private bool isLit()
+        public bool isLit()
         {
             return lit;
         }
 
-        private void SetLit()
+        public void SetLit()
         {
             if (lit == true)
             {

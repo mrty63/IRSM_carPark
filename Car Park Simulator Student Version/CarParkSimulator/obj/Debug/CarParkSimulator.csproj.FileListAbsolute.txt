@@ -2,3 +2,11 @@
 C:\Users\MrTy63\OneDrive\IRSM\Car Park Simulator q1\Car Park Simulator Student Version\CarParkSimulator\bin\Debug\CarParkSimulator.exe.config
 C:\Users\MrTy63\Source\Repos\IRSM_carPark\Car Park Simulator Student Version\CarParkSimulator\bin\Debug\CarParkSimulator.exe.config
 C:\Users\MrTy63\Documents\GitHub\IRSM_carPark\Car Park Simulator Student Version\CarParkSimulator\bin\Debug\CarParkSimulator.exe.config
+C:\Users\MrTy63\Documents\GitHub\IRSM_carPark\Car Park Simulator Student Version\CarParkSimulator\obj\Debug\CarParkSimulator.csprojResolveAssemblyReference.cache
+C:\Users\MrTy63\Documents\GitHub\IRSM_carPark\Car Park Simulator Student Version\CarParkSimulator\obj\Debug\CarParkSimulator.Properties.Resources.resources
+C:\Users\MrTy63\Documents\GitHub\IRSM_carPark\Car Park Simulator Student Version\CarParkSimulator\obj\Debug\CarParkSimulator.SimulatorInterface.resources
+C:\Users\MrTy63\Documents\GitHub\IRSM_carPark\Car Park Simulator Student Version\CarParkSimulator\obj\Debug\CarParkSimulator.csproj.GenerateResource.Cache
+C:\Users\MrTy63\Documents\GitHub\IRSM_carPark\Car Park Simulator Student Version\CarParkSimulator\bin\Debug\CarParkSimulator.exe
+C:\Users\MrTy63\Documents\GitHub\IRSM_carPark\Car Park Simulator Student Version\CarParkSimulator\bin\Debug\CarParkSimulator.pdb
+C:\Users\MrTy63\Documents\GitHub\IRSM_carPark\Car Park Simulator Student Version\CarParkSimulator\obj\Debug\CarParkSimulator.exe
+C:\Users\MrTy63\Documents\GitHub\IRSM_carPark\Car Park Simulator Student Version\CarParkSimulator\obj\Debug\CarParkSimulator.pdb

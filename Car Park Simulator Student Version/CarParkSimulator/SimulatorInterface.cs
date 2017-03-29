@@ -18,6 +18,10 @@ namespace CarParkSimulator
         private CarPark carPark;
         private EntrySensor entrySensor;
         private ExitSensor exitSensor;
+        
+        
+        private List<Ticket> tickets;
+
         /////////////////
 
 
@@ -35,7 +39,7 @@ namespace CarParkSimulator
             // STUDENTS:
             ///// Class contructors are not defined so there will be errors
             ///// This code is correct for the basic version though
-            activeTickets = new ActiveTickets();
+            
             ticketMachine = new TicketMachine(activeTickets);
             ticketValidator = new TicketValidator(activeTickets);
             entryBarrier = new Barrier();
@@ -62,38 +66,38 @@ namespace CarParkSimulator
 
         private void CarArrivesAtEntrance(object sender, EventArgs e)
         {
-
+            carPark.CarArrivedAtEntrance();
             UpdateDisplay();
         }
 
         private void DriverPressesForTicket(object sender, EventArgs e)
         {
-
+            if (carPark.HasSpace() == true) carPark.TicketDispensed();
             UpdateDisplay();
         }
 
         private void CarEntersCarPark(object sender, EventArgs e)
         {
-
+            carPark.CarEnteredCarPark();
             UpdateDisplay();
         }
 
         private void CarArrivesAtExit(object sender, EventArgs e)
         {
-
+            carPark.CarArrivedAtExit();
             UpdateDisplay();
         }
 
         private void DriverEntersTicket(object sender, EventArgs e)
         {
-
+            carPark.TicketValidated();
             UpdateDisplay();
 
         }
 
         private void CarExitsCarPark(object sender, EventArgs e)
         {
-
+            carPark.CarExitedCarPark();
             UpdateDisplay();
         }
 

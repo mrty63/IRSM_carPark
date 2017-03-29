@@ -7,13 +7,16 @@ namespace CarParkSimulator
 {
     class ActiveTickets
     {
-        private List<Ticket> tickets;
+        //attributes
+        private List<Ticket> tickets = new List<Ticket>();
 
-        public ActiveTickets(List<Ticket> tickets)
+        //constructor
+        public ActiveTickets()
         {
             this.tickets = tickets; //Links the Ticket list in CarPark to this class
         }
 
+        //functions
         public void AddTicket()
         {
             tickets.Add(new Ticket());  //Adds a new ticket
@@ -21,6 +24,7 @@ namespace CarParkSimulator
 
         public void RemoveTicket()
         {
+
             tickets.RemoveAt(1);
         }
     }

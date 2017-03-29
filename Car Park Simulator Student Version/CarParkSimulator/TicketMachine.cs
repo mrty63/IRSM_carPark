@@ -9,6 +9,8 @@ namespace CarParkSimulator
     {
         private string message;
         private CarPark carpark;
+        private ActiveTickets activeTickets;
+        
 
         private ActiveTickets tickets;
 

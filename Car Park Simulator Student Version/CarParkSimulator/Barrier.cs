@@ -14,17 +14,17 @@ namespace CarParkSimulator
             lifted = false;
         }
 
-        void Lower()
+        public void Lower()
         {
             lifted = false;
         }
 
-        void Raise()
+        public void Raise()
         {
             lifted = true;
         }
 
-        bool isLifted()
+        public bool isLifted()
         {
             return lifted;
         }
