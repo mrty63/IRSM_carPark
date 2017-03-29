@@ -18,10 +18,6 @@ namespace CarParkSimulator
         private CarPark carPark;
         private EntrySensor entrySensor;
         private ExitSensor exitSensor;
-        
-        
-        private List<Ticket> tickets;
-
         /////////////////
 
 
@@ -39,7 +35,8 @@ namespace CarParkSimulator
             // STUDENTS:
             ///// Class contructors are not defined so there will be errors
             ///// This code is correct for the basic version though
-            
+
+            activeTickets = new ActiveTickets();
             ticketMachine = new TicketMachine(activeTickets);
             ticketValidator = new TicketValidator(activeTickets);
             entryBarrier = new Barrier();
@@ -67,38 +64,106 @@ namespace CarParkSimulator
         private void CarArrivesAtEntrance(object sender, EventArgs e)
         {
             carPark.CarArrivedAtEntrance();
+            entrySensor.CarDetected();
+            btnCarArrivesAtEntrance.Visible = false;
+            btnDriverPressesForTicket.Visible = true;
             UpdateDisplay();
         }
 
         private void DriverPressesForTicket(object sender, EventArgs e)
         {
-            if (carPark.HasSpace() == true) carPark.TicketDispensed();
+            carPark.TicketDispensed();
+            btnDriverPressesForTicket.Visible = false;
+            btnCarEntersCarPark.Visible = true;
             UpdateDisplay();
         }
 
         private void CarEntersCarPark(object sender, EventArgs e)
         {
             carPark.CarEnteredCarPark();
+            entrySensor.CarLeftSensor();
+            btnCarEntersCarPark.Visible = false;
+            if (carPark.IsFull() == true)
+            {
+                btnCarArrivesAtEntrance.Visible = false;
+            }
+            else
+            {
+                btnCarArrivesAtEntrance.Visible = true;
+            }
+
+            if (ActiveRight() == false)
+            {
+                btnCarArrivesAtExit.Visible = true;
+            }
+            
             UpdateDisplay();
         }
 
         private void CarArrivesAtExit(object sender, EventArgs e)
         {
             carPark.CarArrivedAtExit();
+            exitSensor.CarDetected();
+            btnCarArrivesAtExit.Visible = false;
+            btnDriverEntersTicket.Visible = true;
             UpdateDisplay();
         }
 
         private void DriverEntersTicket(object sender, EventArgs e)
         {
             carPark.TicketValidated();
+            btnDriverEntersTicket.Visible = false;
+            btnCarExitsCarPark.Visible = true;
             UpdateDisplay();
-
         }
 
         private void CarExitsCarPark(object sender, EventArgs e)
         {
             carPark.CarExitedCarPark();
+            exitSensor.CarLeftSensor();
+            btnCarExitsCarPark.Visible = false;
+
+            if ((carPark.IsEmpty() == false) || (carPark.HasSpace() == true))
+                btnCarArrivesAtExit.Visible = true;
+
+            if (carPark.IsEmpty() == true)
+            {
+                btnCarArrivesAtExit.Visible = false;
+            }
+            else
+            {
+                btnCarArrivesAtExit.Visible = true;
+            }
+
+            if (ActiveLeft() == false)
+            {
+                btnCarArrivesAtEntrance.Visible = true;
+            }
             UpdateDisplay();
+        }
+
+        public bool ActiveLeft()
+        {
+            if ((btnCarArrivesAtEntrance.Visible == true) || (btnDriverPressesForTicket.Visible == true) || (btnCarEntersCarPark.Visible == true))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool ActiveRight()
+        {
+            if ((btnCarArrivesAtExit.Visible == true) || (btnDriverEntersTicket.Visible == true) || (btnCarExitsCarPark.Visible == true))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         private void UpdateDisplay()
@@ -110,8 +175,8 @@ namespace CarParkSimulator
             else
             {
                 lblEntryBarrier.Text = "False";
-
             }
+            
             if (entrySensor.IsCarOnSensor() == true)
             {
                 lblEntrySensor.Text = "True";
@@ -125,7 +190,7 @@ namespace CarParkSimulator
             {
                 lblExitBarrier.Text = "True";
             }
-            else 
+            else
             {
                 lblExitBarrier.Text = "False";
             }
@@ -148,6 +213,19 @@ namespace CarParkSimulator
                 lblFullSign.Text = "False";
             }
             lblSpaces.Text = Convert.ToString(carPark.GetCurrentSpaces());
+
+            lblTicketMachine.Text = ticketMachine.GetMessage();
+            lblTicketValidator.Text = ticketValidator.GetMessage();
+        }
+
+        private void lblEntrySensor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTicketMachine_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

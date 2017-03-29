@@ -6,12 +6,12 @@ using System.Text;
 namespace CarParkSimulator
 {
     class CarPark
-    {       
+    {
         //attributes
         private int maxSpaces = 5;
-        private int currentSpaces ;
-        EntrySensor entrySensor;
-        ExitSensor exitSensor;
+        private int currentSpaces;
+        //EntrySensor entrySensor = new EntrySensor();
+        //ExitSensor exitSensor = new ExitSensor();
         TicketMachine ticketMachine;
         TicketValidator ticketValidator;
         FullSign fullsign;
@@ -27,12 +27,12 @@ namespace CarParkSimulator
             this.fullsign = fullsign;
             this.entryBarrier = entryBarrier;
             this.exitBarrier = exitBarrier;
-            
+
         }
 
         public void CarArrivedAtEntrance()
         {
-            entrySensor.CarDetected();
+            ticketMachine.CarArrived();
             ticketMachine.GetMessage();
         }
 
@@ -47,22 +47,22 @@ namespace CarParkSimulator
 
         public void CarEnteredCarPark()
         {
-            entrySensor.CarLeftSensor();
+            ticketMachine.ClearMessage();
             if (IsFull() == true)
-                fullsign.SetLit();
+                fullsign.SetLit(true);
             entryBarrier.Lower();
-            currentSpaces++;
+            currentSpaces--;
         }
         public void CarExitedCarPark()
         {
-            exitSensor.CarLeftSensor();
-            if (fullsign.isLit() == true)   fullsign.SetLit();
+            if (fullsign.isLit() == true) 
+                fullsign.SetLit(false);
             exitBarrier.Lower();
+            currentSpaces++;
         }
 
         public void CarArrivedAtExit()
         {
-            exitSensor.CarDetected();
             ticketMachine.GetMessage();
         }
 
@@ -75,8 +75,9 @@ namespace CarParkSimulator
         }
         public bool IsFull()
         {
-            if (currentSpaces == maxSpaces)
+            if (currentSpaces == 0)
             {
+                fullsign.SetLit(true);
                 return true;
             }
             else
@@ -87,7 +88,7 @@ namespace CarParkSimulator
 
         public bool IsEmpty()
         {
-            if (currentSpaces == 0)
+            if (currentSpaces == maxSpaces)
             {
                 return true;
             }

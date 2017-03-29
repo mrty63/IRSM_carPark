@@ -9,14 +9,12 @@ namespace CarParkSimulator
     {
         private string message;
         private CarPark carpark;
-        private ActiveTickets activeTickets;
-        
 
-        private ActiveTickets tickets;
+        private ActiveTickets activetickets;
 
-        public TicketMachine(ActiveTickets tickets)
+        public TicketMachine(ActiveTickets activetickets)
         {
-            this.tickets = tickets;
+            this.activetickets = activetickets;
         }
 
         public void AssignCarPark(CarPark carpark)
@@ -32,8 +30,8 @@ namespace CarParkSimulator
         public void PrintTicket()
         {
             message = "Thank you, enjoy your stay.";
-            tickets.AddTicket();
-            carpark.TicketDispensed();
+            activetickets.AddTicket();
+            //carpark.TicketDispensed();
         }
 
         public string GetMessage()
