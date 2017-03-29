@@ -55,6 +55,7 @@ namespace CarParkSimulator
         }
         public void CarExitedCarPark()
         {
+            ticketValidator.ClearMessage();
             if (fullsign.isLit() == true) 
                 fullsign.SetLit(false);
             exitBarrier.Lower();
@@ -63,7 +64,8 @@ namespace CarParkSimulator
 
         public void CarArrivedAtExit()
         {
-            ticketMachine.GetMessage();
+            ticketValidator.CarArrived();
+            ticketValidator.GetMessage();
         }
 
         public void TicketValidated()

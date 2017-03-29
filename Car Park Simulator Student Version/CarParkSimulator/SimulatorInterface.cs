@@ -216,6 +216,15 @@ namespace CarParkSimulator
 
             lblTicketMachine.Text = ticketMachine.GetMessage();
             lblTicketValidator.Text = ticketValidator.GetMessage();
+
+
+            lstActiveTickets.Items.Clear();
+            List<Ticket> tickets = activeTickets.GetTickets();
+
+            foreach (Ticket ticket in tickets)
+            {
+                lstActiveTickets.Items.Add(Convert.ToString("#" + ticket.ticketNumber() + ":" + ticket.IsPaid()));
+            }
         }
 
         private void lblEntrySensor_Click(object sender, EventArgs e)

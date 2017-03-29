@@ -8,13 +8,18 @@ namespace CarParkSimulator
     class Ticket
     {
         private bool paid;
-        //private int ticketNo;
+        private int ticketNo;
 
         public Ticket()
         {
             paid = false;
-            //Random r = new Random();    // This generates a random number for the ticketNo
-            //ticketNo = r.Next();
+            Random r = new Random();    // This generates a random number for the ticketNo
+            ticketNo = r.Next(0,1000000);
+        }
+
+        public int ticketNumber()
+        {
+            return ticketNo;
         }
 
         public bool IsPaid()
