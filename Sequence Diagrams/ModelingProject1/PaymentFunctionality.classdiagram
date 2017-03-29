@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="58f5e385-8d62-44f1-a5cb-a63a96c9f619" name="PaymentFunctionality" linkedPackageId="5026168f-6182-4e4f-9d38-950c3169ea69" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d27b961a-090f-4e5c-8a00-a92e445b63d2" name="CarPark" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6ffea681-1779-4b71-b688-79ecf2b8bfac" />
+        <targetEnds>
+          <association Id="94cc6fa9-676a-4366-936a-ec338ff1b7df" isDerived="false" sourceEndRoleName="CarPark" targetEndRoleName="FullSign" isLeaf="false" isAbstract="false">
+            <classMoniker Id="e0d61c0e-bc2f-49b7-b4c6-d77ba7926356" LastKnownName="FullSign" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c418a6f9-0107-4006-b746-d9b449d7ae59" name="CarPark" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e74f24b5-77a2-45d8-b8dc-4078e634d3f2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e48a7fe2-89a9-40b8-9b99-17add5250bd6" name="FullSign" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bd1e34b7-2dd1-4f94-9fd9-efc095eb5b17" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5f1b0b5f-b3db-4ce3-9e92-358474546d65" />
+          </association>
+          <association Id="db1d8156-b18e-4bf5-a4fc-c476c864fa7f" isDerived="false" sourceEndRoleName="CarPark" targetEndRoleName="Barrier" isLeaf="false" isAbstract="false">
+            <classMoniker Id="f9f095cc-014a-497c-a35d-97adc47e17d6" LastKnownName="Barrier" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="627f2c35-f6fc-4341-b2ff-70c30fe22022" name="CarPark" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="34fd5cdf-4162-48a7-ac9e-d28f7aec1912" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e112f391-22c9-458f-8d1f-51b41f046ffe" name="Barrier" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="7247e258-3794-4e89-9e44-8203b0b7bf79" name="Lower" value="2">
+                      <elementDefinition Id="09e0bc4b-8f64-4c01-9e18-7f2b74a96e33" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="b871f522-f4e6-433a-a66c-76d4bf2c44ed" name="Upper" value="2">
+                      <elementDefinition Id="8b9b8b06-39a9-43d3-bdc9-6f6cfabb5d94" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="1789ec72-7b69-4b10-a47c-50b0e0704ea7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b4612fd5-1d69-4e46-98ee-e0785bda1fc0" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="58b75673-eb60-4d4c-b491-237745221909" name="currentSpaces" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="830e7926-0873-4828-8364-24f8191ac09e" />
+          </property>
+          <property Id="0b7da244-e74a-477e-8c00-e042ee8792bb" name="maxSpace" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="cb1d097b-0f6f-414c-804c-287b439209d5" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="46cb56f6-7a7d-40d2-8eeb-c22237d283fa" name="CarArrivedAtEntrance" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1f733192-f854-4634-b9a6-f515edda2f39" />
+          </operation>
+          <operation Id="f9890ac0-76c0-4d0c-93b8-41550a0a245d" name="CarEnteredCarPark" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="32ab7771-298f-494c-9e75-2755caeb938f" />
+          </operation>
+          <operation Id="ccd75bd2-c7dc-4157-8547-7f586e8ea4c6" name="TicketDispensed" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f6228c80-5054-4dad-9b51-05d7722167c0" />
+          </operation>
+          <operation Id="42636e90-b6ce-42ee-b18d-76ebdb8b723f" name="CarExitedCarPark" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b0309556-6da1-4071-93a0-a216f67855f4" />
+          </operation>
+          <operation Id="6b4c31ab-4606-45a6-9269-4d3158bf4329" name="TicketValidated" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="12e08b95-b70f-498e-bb3c-bf6a97d9b500" />
+          </operation>
+          <operation Id="d43a19a2-1619-41f6-a149-d25dca004fc0" name="CarArrivedAtExit" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="285767b9-f251-4eb5-8cf8-be21ccf0362b" />
+          </operation>
+          <operation Id="06ff6f96-e25f-43ef-87c7-49da856bdc0d" name="IsFull" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2bec35fb-5797-423e-8d36-8974a386a46f" />
+          </operation>
+          <operation Id="a03d8e97-9c35-4fba-908a-5b8496d64659" name="HasSpace" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0fd8fc07-8705-457a-bc4b-3aa9931637e5" />
+          </operation>
+          <operation Id="37ef7fc4-b173-48d6-b32c-d879d42b3bc3" name="GetCurrentSpaces" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="47eb716d-5c8e-48bf-a3b6-c5127df84a3c" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e0d61c0e-bc2f-49b7-b4c6-d77ba7926356" name="FullSign" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="bde51cd8-f664-45e1-9370-00c09c5c8daa" />
+        <ownedAttributesInternal>
+          <property Id="094864e9-0a1f-46e7-919f-5cf44b61622d" name="lit" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5780a7b8-b8ad-4bea-b09a-f5470a8c6aa9" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="fe6ebac3-a5df-49c5-9afa-4bee25f56189" name="IsLit" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9d8b25b6-e9c8-4ed3-b7b3-280fee3dd8de" />
+          </operation>
+          <operation Id="454b64a9-1945-4f55-8af0-9f90ba6fe1cb" name="SetLit" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5f72757b-4069-474e-ae75-d0603b9ec74f" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f9f095cc-014a-497c-a35d-97adc47e17d6" name="Barrier" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d07469b2-3dd8-447d-88bb-cb40ba6b00c5" />
+        <ownedAttributesInternal>
+          <property Id="52146016-4ea2-43c8-93e7-982d26a8a02a" name="lifted" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3f7636d7-4152-471e-b62d-ac55a667c28d" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="9ef7fb96-765d-446f-984b-c10a2aa873e5" name="Lower" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="33f2baff-9c7f-4283-aef3-2c1a57ae1892" />
+          </operation>
+          <operation Id="046307b5-ab69-4b30-bdbe-1a41f456e427" name="Raise" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0ece6cd0-f87d-48f4-a9e8-85c867b431e7" />
+          </operation>
+          <operation Id="3c47ae7f-b5a5-465f-ae7f-794c2b77ed86" name="IsLifted" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fc20283f-f986-4e5c-9330-f109a6b85266" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6f2f8c79-8046-4f01-8357-2870ad2d5afa" name="SimulatorInterface" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e414f85a-0a4a-4e36-9d8a-059f619f7f93" />
+        <ownedOperationsInternal>
+          <operation Id="6cf3feb5-6b1f-4293-882a-197054ee054d" name="ResetSystem" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9eb0a251-d688-4883-903a-b443ad8a1708" />
+          </operation>
+          <operation Id="345017c9-506e-44bd-823e-6df909051b56" name="CarArrivesAtEntrance" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="33a7d5ab-e8df-49ee-8511-b7efe1de4ac1" />
+          </operation>
+          <operation Id="da3bebca-79e1-4ef7-8cbe-c28b23f4e707" name="CarEntersCarPark" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="87c2a103-ede4-4916-9fd2-b19e2e96d7f9" />
+          </operation>
+          <operation Id="d4cf7b8f-3641-4adb-9644-4dc3c97de226" name="DriverPressesForTicket" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5944933a-f2e6-41bc-a5b8-72257efc3fd9" />
+          </operation>
+          <operation Id="fbba0b4f-1394-4352-ab21-e3699d6d1eb9" name="CarArrivesAtExit" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1adab882-aa42-4347-8ac7-f93741926a24" />
+          </operation>
+          <operation Id="19e7bc87-2f90-4cd8-ab7a-ff2123ccef1e" name="DriverEntersTicket" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5de3de8a-cd92-4b00-bcfd-0db9659a053e" />
+          </operation>
+          <operation Id="99677da6-ed00-4e6f-b96f-874ecdd6fef1" name="CarExitsCarPark" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="771d223e-7c6b-46d0-a65d-614d0094a98c" />
+          </operation>
+          <operation Id="549632e5-852d-46d4-a6c3-2cc795d33532" name="UpdateDisplay" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0146b39f-530a-49e0-8b88-3ef4fed50bf1" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4d3f83e3-daab-4851-935d-11996fca393c" name="Sensor" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9d829036-f66d-4a3e-869e-0619705dc0c1" />
+        <targetEnds>
+          <association Id="64213f74-751e-408a-b6ec-cfaca1d57c33" isDerived="false" sourceEndRoleName="Sensors" targetEndRoleName="CarPark" isLeaf="false" isAbstract="false">
+            <classMoniker Id="d27b961a-090f-4e5c-8a00-a92e445b63d2" LastKnownName="CarPark" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="aca1f7e2-3cbd-4dfc-9f42-70fda8c96872" name="Sensors" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="07cca782-4ed8-40ab-916e-c44abd6dad8a" name="Lower" value="2">
+                      <elementDefinition Id="74203d56-dd08-4472-9326-c3164a990ac8" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="84479e26-57b7-4ac3-8ff3-62e683a6f299" name="Upper" value="2">
+                      <elementDefinition Id="6432d59b-b528-420f-bc46-13141e823f21" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="d0b3df6a-4ecb-4702-a911-663c187afc78" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6cd37de6-d3fc-4d43-af36-1016ac82fef2" name="CarPark" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6580f970-65be-41d9-a03e-774a6c528d2e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="01806055-7fd5-4a26-a074-f6910a2cf0fc" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="e0c3a0fa-3858-489f-8609-ec95d44b32f5" name="carOnSensor" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4c8c92c5-364b-468e-9b27-d0459b9ac64e" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="cf3b100a-b1ab-433c-9ea6-bf80755eb094" name="CarDetected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f1f26945-cb41-4cb4-b22e-f9f6d7224cfe" />
+          </operation>
+          <operation Id="bec0d79f-30d5-429c-830b-6082e99fcd49" name="CarLeftSensor" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b0fef822-b040-4885-b0cd-bd1fd079dd85" />
+          </operation>
+          <operation Id="944efecc-70a1-4ee6-8843-1fc81c17102c" name="IsCarOnSensor" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a199e771-473e-4943-af78-c1294446a4aa" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a0920192-5edd-45fd-8997-28ea9489648e" name="EntrySensor" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="01b988b9-6210-4a36-9453-55ffd9a61bf3" />
+        <generalsInternal>
+          <generalization Id="f622d62d-810a-433f-86af-cc4c0cde4eee" isSubstitutable="false">
+            <classMoniker Id="4d3f83e3-daab-4851-935d-11996fca393c" LastKnownName="Sensor" />
+            <elementDefinition Id="37e5c879-4c6b-4111-a216-7a2d7d426180" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="7a8d53e0-6a97-4b48-afa0-0aebbbd3502f" name="CarDetected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="06ce40e6-76b0-4ac6-87b6-218ebee7be50" />
+          </operation>
+          <operation Id="e5fbc106-bb42-4170-963f-60774c189c31" name="CarLeftSensor" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7e2896ab-c0dc-4dc7-a23b-aa607a8b451e" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f1821d0f-b138-4f7d-8d8a-9160331aeae7" name="ExitSensor" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="176f92fb-da90-4baf-9f48-58d0589130e4" />
+        <generalsInternal>
+          <generalization Id="ff5dda15-89e4-4e6e-abf1-c42a4eb6829d" isSubstitutable="false">
+            <classMoniker Id="4d3f83e3-daab-4851-935d-11996fca393c" LastKnownName="Sensor" />
+            <elementDefinition Id="7464ebd4-f4ec-434b-9a0f-df7013c9e7e8" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="9854d2bd-eea2-497d-93b4-34e0fa52db8e" name="CarDetected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a20f8311-a235-442a-b5b3-7d9a8fca6d35" />
+          </operation>
+          <operation Id="48130cf9-017e-4569-bfe0-f5568835a73c" name="CarLeftSensor" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d682b80f-06ff-486c-bc83-71eced9a3171" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="9fe81241-8c39-4116-a90c-92004de333dd" name="TicketMachine" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ef8c452a-cf05-4cd0-9c75-84b366d53c64" />
+        <targetEnds>
+          <association Id="b37ea43c-39eb-46be-a719-b4bb85c02762" isDerived="false" sourceEndRoleName="TicketMachine" targetEndRoleName="CarPark" isLeaf="false" isAbstract="false">
+            <classMoniker Id="d27b961a-090f-4e5c-8a00-a92e445b63d2" LastKnownName="CarPark" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="81828b8d-3b97-4f2b-8504-f997f6df33b2" name="TicketMachine" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c5a481dd-f235-4139-b49e-2a7843e12f24" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="67a5670a-8acc-45c2-90cd-1759abe0d5cd" name="CarPark" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="dc41dba4-7458-4eda-8780-137cd4224dcc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="87135219-304e-4a76-81c5-65604896e201" />
+          </association>
+          <association Id="cc91f079-b7d5-4a06-88f4-ebbd23ae680e" isDerived="false" sourceEndRoleName="TicketMachine" targetEndRoleName="Class1" isLeaf="false" isAbstract="false">
+            <classMoniker Id="5debdf9e-dad6-449d-97cd-b687d9bfa5c0" LastKnownName="ActiveTickets" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6b1dc0cb-98d5-4b3c-af3d-2ecb57c9e554" name="TicketMachine" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="399302af-039f-4793-8479-af6d09df7a53" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="13827ad2-d909-481a-bed7-cc1e6b32e95d" name="Class1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2ebd36c6-331f-47ed-a32d-b42e7674b1ab" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bee1aa56-8b3e-450d-94a0-cb70317484d7" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="584ca236-f783-4283-b4a3-4bf7a069ee2c" name="message" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f713bfbc-ed9d-4775-8cee-382c21e5486f" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="e99ee820-def3-465a-910a-0952331b0a1f" name="AssignCarPark" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e6e0aabf-d142-43bc-bb74-20054f3ea94c" />
+          </operation>
+          <operation Id="4a68bf6d-7b23-4d9e-b53b-29bfb386bd91" name="CarArrived" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a68fb241-32f4-4c11-8907-4f1ff8dee74a" />
+          </operation>
+          <operation Id="392fd1d7-ae19-4688-b1d3-dad9ac9fe8de" name="GetMessage" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="743cbbc3-4026-4fbe-b900-0abd4952648f" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5debdf9e-dad6-449d-97cd-b687d9bfa5c0" name="ActiveTickets" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2d4aec53-eef5-413e-9eae-6c2ea7bfba67" />
+        <targetEnds>
+          <association Id="11092f50-58fa-47fe-88b3-fd13eef9a784" isDerived="false" sourceEndRoleName="ActiveTickets" targetEndRoleName="Ticket" isLeaf="false" isAbstract="false">
+            <classMoniker Id="83bc96b5-d00d-489f-9052-c6086108bdf7" LastKnownName="Ticket" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6456d60e-daf1-4f93-9af7-cb343e379106" name="ActiveTickets" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d805bfdc-3336-4ea7-833e-9070222df87b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="36a4fdda-e677-4d47-973f-82daaa33fb6e" name="Ticket" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="384c5ac9-97c2-4cf1-b211-0aae5fac898b" name="Lower" value="0">
+                      <elementDefinition Id="3c4588af-eaa8-424e-aaa1-5e947837d7ad" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="7f275e04-bca8-4ca4-9c44-01fe9ccb4542" name="Upper" value="*">
+                      <elementDefinition Id="ba24791e-24a3-45e6-9171-2c1141533b30" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="a206260f-e4a7-41dd-b30e-7412b3399e8a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3136ebb3-4ed9-49ce-97cc-b78f2ab71880" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="972a228e-0ab7-4e76-ad45-ea501296bb7d" name="AddTicket" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a36b4261-5a02-4410-a8b7-82265a3e5734" />
+          </operation>
+          <operation Id="9aa1486c-1230-42f0-ad7f-a7d191907931" name="RemoveTicket" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="be49c5e4-a42b-43e6-876f-8a2e232029be" />
+          </operation>
+          <operation Id="2ddd339c-3178-4d9d-81a2-b22813ea999d" name="GetTickets" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1b73651a-9b30-4d54-846a-81db0e6f909a" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="83bc96b5-d00d-489f-9052-c6086108bdf7" name="Ticket" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="af59640c-9335-4b45-95c4-45fccb62e765" />
+        <targetEnds>
+          <association Id="db4a6865-0cbd-44fe-aee8-3900abcba068" isDerived="false" sourceEndRoleName="Ticket" targetEndRoleName="PaymentMachine" isLeaf="false" isAbstract="false">
+            <classMoniker Id="5ecd2c3c-4cc5-4579-a9f8-17ca8eb6e3eb" LastKnownName="PaymentMachine" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="63d2eed3-faa9-4d8f-8e84-107658627177" name="Ticket" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a9226d98-5961-4513-9b7e-e0f23874347c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="23b66881-69d9-4c23-b4aa-b6af03b39df6" name="PaymentMachine" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ba144ded-a533-4595-9bcf-e6d695582a68" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="64b2b080-0a00-4d18-9abc-7f9cfb1b8bec" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="f6e94bf0-44c4-4418-a47f-d841e76dee9a" name="paid" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="aa0b33b7-82b1-42bf-b9b0-55bef00ab8c3" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="11c6b5d6-2725-40dc-b895-fd2690f97a2c" name="IsPaid" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="786eb74a-812d-45ca-8731-856a7f1e1ceb" />
+          </operation>
+          <operation Id="c32b97a1-9dfe-4fa9-9899-30de42360887" name="SetPaid" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="10975b3a-064f-4873-9e1c-c1cc9359e331" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c2becd1a-fcbd-43d0-9cbf-568ee2068684" name="TicketValidator" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="94d265a0-df47-4be9-a22c-95c5a736ffb9" />
+        <targetEnds>
+          <association Id="2842004d-a174-4ddf-a6dc-a06268526709" isDerived="false" sourceEndRoleName="TicketValidator" targetEndRoleName="ActiveTickets" isLeaf="false" isAbstract="false">
+            <classMoniker Id="5debdf9e-dad6-449d-97cd-b687d9bfa5c0" LastKnownName="ActiveTickets" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="623cd29c-5e94-4907-9bb3-00e53f73dcfb" name="TicketValidator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7d7dd5d9-3a9f-4ec2-a570-58bbb80bc1d1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e261e142-10f4-48fd-9a67-7a96942fc176" name="ActiveTickets" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="10ebbcbd-45a5-4f17-99de-e485c54b377e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="86bb7a96-8930-466c-913f-97b4f6b8bca1" />
+          </association>
+          <association Id="853babfb-fe37-4ffc-ab36-9ab4f010ae8f" isDerived="false" sourceEndRoleName="TicketValidator" targetEndRoleName="CarPark" isLeaf="false" isAbstract="false">
+            <classMoniker Id="d27b961a-090f-4e5c-8a00-a92e445b63d2" LastKnownName="CarPark" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7f071b5d-ff59-46d5-960d-984cdbfffb4e" name="TicketValidator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="56acbf87-ec21-4f9d-bff6-bfe9c0a20d2c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e50e39a8-8ff2-4167-8ccc-6c796d85dcfd" name="CarPark" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="83ad45ad-c6d0-4211-a4e1-6c253c6a6123" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="dda72bc5-3a33-4cad-b61f-9e055e0da401" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="ead8bc25-5114-478f-be0e-a3ea33727285" name="message" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d42a6e8d-f668-46b7-9683-de550f30c8e0" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="45ac8702-92fd-442b-8933-4469abe76d7b" name="AssignCarPark" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="675ec8b6-21df-4c16-99ab-7db199c48237" />
+          </operation>
+          <operation Id="82b07522-b83c-4e29-94e6-501f9bf974d3" name="GetMessage" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7709900a-3ca7-4693-910a-6784c704bdb1" />
+          </operation>
+          <operation Id="8ac12636-5fe8-42bb-ad74-97ae6faa3250" name="CarArrived" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="23b4a48e-2c9e-4eca-b9e8-73b56957bacb" />
+          </operation>
+          <operation Id="3398fdfe-2aed-4154-82e5-048b8dee3559" name="TicketEntered" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="32e753a6-f0de-4e35-a531-737c1e1432ed" />
+          </operation>
+          <operation Id="db50a83a-ef41-4a3d-9d26-6f15cae1d1bb" name="ClearMessage" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="657c1d16-22dd-4cdf-a571-457232edf221" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5ecd2c3c-4cc5-4579-a9f8-17ca8eb6e3eb" name="PaymentMachine" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9285eeb6-78c3-431f-b290-0f2c1b44451e" />
+        <targetEnds>
+          <association Id="6925c07a-4221-4384-927b-3365e3de98a7" isDerived="false" sourceEndRoleName="PaymentMachine" targetEndRoleName="CarPark" isLeaf="false" isAbstract="false">
+            <classMoniker Id="d27b961a-090f-4e5c-8a00-a92e445b63d2" LastKnownName="CarPark" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6fc6507b-fc6f-4868-95c2-843d389762c9" name="PaymentMachine" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c90aa907-3ea3-43ca-9cea-66ab0203e2e0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c074b27e-21eb-434f-bbdb-c8e980b97b5f" name="CarPark" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="256ccc54-d303-4332-a351-d5f41eb45e6e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d6b599ef-6ec3-4870-ad74-bcec3e1183eb" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="b9a79c65-9507-498d-a12e-6a526ddb6014" name="Pay" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1f2cd102-afb0-412d-b41f-b24c33959547" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="5026168f-6182-4e4f-9d38-950c3169ea69" name="ModelingProject1">
+    <elementDefinition Id="478de221-c20b-4553-b2e1-bd9ac8c68bd1" />
+    <profileInstances>
+      <packageHasProfileInstances Id="6c14959c-3552-4b05-8b88-41e56db65983">
+        <profileInstance Id="c61df428-a47c-4837-bc0a-43429ca7a768" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="904300c7-08b8-4924-b7d4-238da20713f0">
+        <profileInstance Id="cb55892d-8502-4f46-881d-dce7817d7f66" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>
